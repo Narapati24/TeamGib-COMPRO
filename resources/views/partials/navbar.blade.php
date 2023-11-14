@@ -1,7 +1,7 @@
 <nav class="fixed top-0 left-0 w-screen bg-gray-950 text-white border-gray-200 dark:bg-gray-900">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="/img/logo/G-Logo.png" class="h-14" alt="G-Logo" />
+      <img src="/img/logo/G-Logo.png" class="h-14" alt="G-Logo" loading="lazy" />
       <span class="self-center text-lg leading-4 font-semibold whitespace-nowrap dark:text-white">
         <div>Generasi</div>
         <div>Inspirasi Berkarya</div>
@@ -59,22 +59,22 @@
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-language">
     <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
       <li class="py-2">
-        <a href="#" class="block py-2 px-3 rounded md:bg-transparent  md:p-0" aria-current="page">Home</a>
+        <a href="#" class="block py-2 px-3 md:p-0 rounded navbar-gradient-border-bottom {{ ($title == 'Home') ? 'navbar-active' : '' }}">Home</a>
       </li>
       <li class="py-2">
-        <a href="#" class="block py-2 px-3 md:p-0 rounded hover:bg-gray-100 md:hover:bg-transparent">About</a>
+        <a href="#" class="block py-2 px-3 md:p-0 rounded navbar-gradient-border-bottom {{ ($title == 'About') ? 'navbar-active' : '' }}">About</a>
       </li>
       <li class="py-2">
-        <a href="#" class="block py-2 px-3 md:p-0 rounded hover:bg-gray-100 md:hover:bg-transparent">Product</a>
+        <a href="#" class="block py-2 px-3 md:p-0 rounded navbar-gradient-border-bottom {{ ($title == 'Product') ? 'navbar-active' : '' }}">Product</a>
       </li>
       <li class="py-2">
-        <a href="#" class="block py-2 px-3 md:p-0 rounded hover:bg-gray-100 md:hover:bg-transparent">Portofolio</a>
+        <a href="#" class="block py-2 px-3 md:p-0 rounded navbar-gradient-border-bottom {{ ($title == 'Portofolio') ? 'navbar-active' : '' }}">Portofolio</a>
       </li>
       <li class="py-2">
-        <a href="#" class="block py-2 px-3 md:p-0 rounded hover:bg-gray-100 md:hover:bg-transparent">Blog</a>
+        <a href="#" class="block py-2 px-3 md:p-0 rounded navbar-gradient-border-bottom {{ ($title == 'Blog') ? 'navbar-active' : '' }}">Blog</a>
       </li>
       <li class="py-2">
-        <a href="#" class="block py-2 px-3 md:p-0 rounded hover:bg-gray-100 md:hover:bg-transparent">Contuctus</a>
+        <a href="#" class="block py-2 px-3 md:p-0 rounded navbar-gradient-border-bottom {{ ($title == 'Contuctus') ? 'navbar-active' : '' }}">Contuctus</a>
       </li>
       <li class="bg-gradient-to-b from-purple-500 to-transparent px-4 py-2 rounded">
         <a href="#" class="block py-2 px-3 md:p-0 rounded">E-Commerce</a>

@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navbar-gradient-border-bottom {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.navbar-gradient-border-bottom::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #AF60FF, #5956E8);
+  transform-origin: bottom;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-gradient-border-bottom:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar-active::after{
+  transform: scaleX(1);
+}
