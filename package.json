@@ -21,6 +21,10 @@
   },
   "dependencies": {
     "flowbite": "^2.1.1",
+    "jquery": "^3.7.1",
+    "jquery-lazy": "^1.7.11",
+    "jsdom": "^22.1.0",
+    "lozad": "^1.16.0",
     "typeit": "^8.7.1"
   }
 }

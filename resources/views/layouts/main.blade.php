@@ -13,8 +13,9 @@
   
     @yield('container')
   </main>
-  <script src="/js/app.js"></script>
   <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+  <script src="/js/app.js"></script>
+
   @yield('script')
 </body>
 </html>

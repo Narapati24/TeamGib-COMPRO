@@ -7,7 +7,7 @@
         Jasa  Pembuatan <span class="text-[#A973B0] type-effect"></span><br>
         No . 1 Di Indonesia
         <span class="inline-flex align-middle">
-          <img src="/img/icon/mendali.png" class="w-8" alt="mendali">
+          <img src="/img/icons/mendali.png" class="w-8" alt="mendali">
         </span>
       </h1>
     </div>
@@ -20,6 +20,29 @@
         Selain layanan tersebut, dengan memanfaat kan serta melatih dan menyalurkan 
         keahlian para pemuda Indonesia yang menjadi prioritas utama
         perusahaan kami adalah kepuasan customer.</p>
+    </div>
+  </section>
+  <section class="flex items-center justify-center bg-main-gray mx-auto px-4 text-white py-40">
+    <div class="w-[90%]">
+      <div class="flex items-center mb-16">
+        <div class="bg-main-blue ms-4 p-4 rounded-full">
+          <img src="/img/icons/eye.svg" alt="icon eye" class="w-10">
+        </div>
+        <h3 class="ms-4 text-5xl font-bold bg-gradient-to-b from-[#9E00FF] to-[#27AAE1] bg-clip-text text-transparent">Mengapa Kami?</h3>
+      </div>
+      <div class="flex flex-wrap items-center justify-center w-full">
+        @for ($i = 0; $i < 6; $i++)
+            <div class="w-1/3 p-4">
+                <div class="h-[475px] bg-gradient-to-b from-[#36363E] to-[#292930] rounded-lg m-auto border-b border-b-slate-400">
+                    <div class="flex justify-center flex-col w-full h-full px-8">
+                        <img src="/img/icons/creative.svg" alt="icon creative" class="w-28">
+                        <p>Creative</p>
+                        <p>Tim yang berpengalaman dan kreatif siap membantu segala kebutuhan anda.</p>
+                    </div>
+                </div>
+            </div>
+        @endfor
+    </div>
     </div>
   </section>
 @endsection
