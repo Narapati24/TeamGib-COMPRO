@@ -12,7 +12,8 @@
       </h1>
     </div>
   </section>
-  <section class="flex items-center justify-center h-screen mx-auto px-4 text-center">
+
+  <section class="flex items-center justify-center h-screen mx-auto px-4 text-center bg-main-smoke-white">
     <div>
       <h2 class="text-5xl font-bold bg-gradient-to-b from-[#9E00FF] to-[#27AAE1] bg-clip-text text-transparent">About Us?</h2>
       <p class="text-xl px-40 mt-6">PT. GIB menyediakan jasa layanan di bidang Multimedia dalam Empat bidang utama, 
@@ -22,6 +23,7 @@
         perusahaan kami adalah kepuasan customer.</p>
     </div>
   </section>
+
   <section class="flex items-center justify-center bg-main-gray mx-auto px-4 text-white py-40">
     <div class="w-[90%]">
       <div class="flex items-center mb-16">
@@ -45,7 +47,8 @@
       </div>
     </div>
   </section>
-  <section class="flex items-center justify-center py-40">
+
+  <section class="flex items-center justify-center bg-main-smoke-white py-40">
     <div class="w-[90%]">
       <div class="flex items-center mb-16">
         <div class="bg-main-blue ms-4 p-4 rounded-full">
@@ -70,6 +73,36 @@
         @endfor
       </div>
     </div>
+  </section>
+
+  <section class="flex items-center justify-center bg-main-gray mx-auto px-4 py-20">
+    <div class="w-[95%] text-center">
+      <div class="mb-16">
+        <h3 class="ms-4 text-5xl font-bold bg-gradient-to-b from-[#9E00FF] to-[#27AAE1] bg-clip-text text-transparent">Our Team</h3>
+      </div>
+      <div class="flex flex-wrap items-center justify-center w-full">
+        @for ($i = 0; $i < 5; $i++)
+            <div class="w-1/5 p-2 flex flex-col items-center text-white">
+                <div class="h-[359px] bg-main-smoke-white m-auto border-b border-b-slate-400 overflow-hidden">
+                  <img src="/img/our-teams/rafli-chaerul.png" alt="icon creative" class="w-full mb-8">
+                </div>
+                <div class="mt-[-40px] w-[90%] py-4 bg-gradient-to-b from-[#9E00FF] to-[#292930] rounded-lg">
+                  <div class="flex justify-evenly">
+                    <img src="/img/icons/instagram.svg" class="w-8" alt="icon instagram">
+                    <img src="/img/icons/facebook.svg" class="w-8" alt="icon facebook">
+                    <img src="/img/icons/twitter.svg" class="w-8" alt="icon twitter">
+                  </div>
+                </div>
+                <p class="text-3xl">Rafli Chaerul. G</p>
+                <p class="text-xl text-[#DDBB74]">Directur</p>
+            </div>
+        @endfor
+      </div>
+    </div>
+  </section>
+
+  <section class="flex items-center justify-center bg-main-smoke-white py-40">
+    <h3 class="font-bold text-5xl bg-gradient-to-b from-[#9E00FF] to-[#27AAE1] bg-clip-text text-transparent">Our Client</h3>
   </section>
 @endsection
 
