@@ -101,9 +101,55 @@
     </div>
   </section>
 
-  <section class="flex items-center justify-center bg-main-smoke-white py-40">
-    <h3 class="font-bold text-5xl bg-gradient-to-b from-[#9E00FF] to-[#27AAE1] bg-clip-text text-transparent">Our Client</h3>
+  @php
+      $ourClients = ['wifiku.png', 'priba.png', 'Tpb.png', 'msn.png'];
+  @endphp
+  <section class="flex items-center justify-center flex-col bg-main-smoke-white py-40">
+    <div class="mb-16">
+      <h3 class="font-bold text-5xl bg-gradient-to-b from-[#9E00FF] to-[#27AAE1] bg-clip-text text-transparent">Our Client</h3>
+    </div>
+    <div class="flex flex-row justify-evenly w-full">
+      @foreach ($ourClients as $ourClient)
+      <img src="img/our-client/{{ $ourClient }}" alt="{{ $ourClient }}" class="h-24 aspect-auto">
+      @endforeach
+    </div>
   </section>
+  
+  <section class="flex items-center flex-col justify-center text-white bg-main-gray py-40">
+    <div class="flex justify-evenly w-full">
+      <h3 class="font-bold text-5xl bg-gradient-to-b from-[#9E00FF] to-[#27AAE1] bg-clip-text text-transparent">Support</h3>
+      <p class="whitespace-break-spaces text-start text-lg">
+        Kami percaya, setiap produk berkualitas harus diimbangi dengan layanan. 
+        Kami ada untuk melayanimu di manapun berada. 
+        Karena kami adalah PT.Generasi Inspirasi Berkarya
+      </p>
+    </div>
+    <div class="flex flex-row justify-evenly items-center w-full">
+      <img src="img/assets/supports.png" alt="support" class="w-[30%]">
+      <div class="w-[45%] flex flex-col justify-evenly">
+        <h4 class="font-bold text-4xl bg-gradient-to-b from-[#9E00FF] to-[#27AAE1] bg-clip-text text-transparent">Telepon</h4>
+        <p class="text-start text-lg ps-2">
+          Perlu bantuan langsung tanpa ketik? Hubungi kami di nomor 0896-9663-0009 dan sampaikan permasalahan yang kamu hadapi
+        </p>
+          <hr>
+        <h4 class="font-bold text-4xl bg-gradient-to-b from-[#9E00FF] to-[#27AAE1] bg-clip-text text-transparent">Livechat</h4>
+        <p class="text-start text-lg ps-2">
+          Malas untuk keluar uang hanya untuk telpon? Tenang, kami ada fitur livechat yang selalu siap 24 jam!
+        </p>
+          <hr>
+        <h4 class="font-bold text-4xl bg-gradient-to-b from-[#9E00FF] to-[#27AAE1] bg-clip-text text-transparent">Email</h4>
+        <p class="text-start text-lg ps-2">
+          Kamu butuh panduan tulis lengkap? Kirim kendala kamu melalui email dan semua akan teratasi
+        </p>
+          <hr>
+        <h4 class="font-bold text-4xl bg-gradient-to-b from-[#9E00FF] to-[#27AAE1] bg-clip-text text-transparent">Whatsapp</h4>
+        <p class="text-start text-lg ps-2">
+          Kami siap memberikan solusi atas setiap permasalahan dan pertanyaan yang kamu berikan melalui aplikasi WhatsApp
+        </p>
+      </div>
+    </div>
+  </section>
+  
 @endsection
 
 @section('script')
