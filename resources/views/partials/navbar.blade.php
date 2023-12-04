@@ -1,4 +1,4 @@
-<nav class="fixed top-0 left-0 w-screen bg-gray-950 text-white border-gray-200 dark:bg-gray-900">
+<nav class="fixed top-0 left-0 w-screen bg-gray-950 text-white border-gray-200 dark:bg-gray-900 z-50">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="/img/logo/G-Logo.png" class="h-14" alt="G-Logo" />

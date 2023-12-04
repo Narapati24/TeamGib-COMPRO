@@ -33,17 +33,17 @@
         <h3 class="ms-4 text-5xl font-bold bg-gradient-to-b from-[#9E00FF] to-[#27AAE1] bg-clip-text text-transparent">Mengapa Kami?</h3>
       </div>
       <div class="flex flex-wrap items-center justify-center w-full">
-        @for ($i = 0; $i < 6; $i++)
-            <div class="w-1/3 p-4 px-10">
-                <div class="h-[475px] bg-gradient-to-b from-[#36363E] to-[#292930] rounded-lg m-auto border-b border-b-slate-400">
-                    <div class="flex justify-center flex-col w-full h-full px-8">
-                        <img src="/img/icons/creative.svg" alt="icon creative" class="w-28 mb-8">
-                        <h6 class="text-lg font-semibold mb-2">Creative</h6>
-                        <p class="font-light">Tim yang berpengalaman dan kreatif siap membantu segala kebutuhan anda.</p>
-                    </div>
-                </div>
-            </div>
-        @endfor
+        @foreach ($whyUss as $whyUs)
+          <div class="w-1/3 p-4 px-10">
+              <div class="h-[475px] bg-gradient-to-b from-[#36363E] to-[#292930] rounded-lg m-auto border-b border-b-slate-400">
+                  <div class="flex justify-center flex-col w-full h-full px-8">
+                      <img src="/img/icons/{{ $whyUs['img'] }}" alt="icon {{ $whyUs['title'] }}" class="w-28 mb-8">
+                      <h6 class="text-lg font-semibold mb-2">{{ $whyUs['title'] }}</h6>
+                      <p class="font-light">{{ $whyUs['body'] }}</p>
+                  </div>
+              </div>
+          </div>
+        @endforeach
       </div>
     </div>
   </section>
@@ -57,20 +57,20 @@
         <h3 class="ms-4 text-5xl font-bold bg-gradient-to-b from-[#9E00FF] to-[#27AAE1] bg-clip-text text-transparent">Product</h3>
       </div>
       <div class="flex flex-wrap items-center justify-center w-full text-white">
-        @for ($i = 0; $i < 3; $i++)
-            <div class="w-1/3 p-4 px-10">
-                <div class="h-[475px] bg-gradient-to-b from-[#36363E] to-[#292930] rounded-lg m-auto border-b border-b-slate-400">
-                    <div class="flex justify-center flex-col w-full h-full px-8">
-                        <img src="/img/icons/creative.svg" alt="icon creative" class="w-28 mb-8">
-                        <h6 class="text-6xl font-bold">Graphic Design</h6>
-                        <button class="flex items-center justify-center mt-8 py-4 px-8 rounded-lg bg-gradient-to-b from-[#9E00FF] to-transparent">
-                          <span class="me-4 text-lg">Read More</span>
-                          <img src="/img/icons/right-arrow-next.svg" alt="right arrow icon" class="w-4 mt-1">
-                        </button>
-                    </div>
-                </div>
-            </div>
-        @endfor
+        @foreach ($products as $product)
+          <div class="w-1/3 p-4 px-10">
+              <div class="h-[475px] bg-gradient-to-b from-[#36363E] to-[#292930] rounded-lg m-auto border-b border-b-slate-400">
+                  <div class="flex justify-center flex-col w-full h-full px-8">
+                      <img src="/img/icons/{{ $product['img'] }}" alt="icon {{ $product['title'] }}" class="w-28 mb-8">
+                      <h6 class="text-5xl font-bold">{{ $product['title'] }}</h6>
+                      <button class="flex items-center justify-center mt-8 py-4 px-8 rounded-lg bg-gradient-to-b from-[#9E00FF] to-transparent">
+                        <span class="me-4 text-lg">Read More</span>
+                        <img src="/img/icons/right-arrow-next.svg" alt="right arrow icon" class="w-4 mt-1">
+                      </button>
+                  </div>
+              </div>
+          </div>
+        @endforeach
       </div>
     </div>
   </section>
@@ -81,29 +81,32 @@
         <h3 class="ms-4 text-5xl font-bold bg-gradient-to-b from-[#9E00FF] to-[#27AAE1] bg-clip-text text-transparent">Our Team</h3>
       </div>
       <div class="flex flex-wrap items-center justify-center w-full">
-        @for ($i = 0; $i < 5; $i++)
-            <div class="w-1/5 p-2 flex flex-col items-center text-white">
-                <div class="h-[359px] bg-main-smoke-white m-auto border-b border-b-slate-400 overflow-hidden">
-                  <img src="/img/our-teams/rafli-chaerul.png" alt="icon creative" class="w-full mb-8">
-                </div>
-                <div class="mt-[-40px] w-[90%] py-4 bg-gradient-to-b from-[#9E00FF] to-[#292930] rounded-lg">
-                  <div class="flex justify-evenly">
+        @foreach ($ourTeams as $ourTeam)
+          <div class="w-1/5 p-2 flex flex-col items-center text-white">
+              <div class="h-[359px] bg-main-smoke-white m-auto border-b border-b-slate-400 overflow-hidden">
+                <img src="/img/our-teams/rafli-chaerul.png" alt="icon creative" class="w-full mb-8">
+              </div>
+              <div class="mt-[-40px] w-[90%] py-4 bg-gradient-to-b from-[#9E00FF] to-[#292930] rounded-lg">
+                <div class="flex justify-evenly">
+                  <a href="https://instagram.com/{{ $ourTeam['instagram'] }}">
                     <img src="/img/icons/instagram.svg" class="w-8" alt="icon instagram">
+                  </a>
+                  <a href="https://facebook.com/{{ $ourTeam['facebook'] }}">
                     <img src="/img/icons/facebook.svg" class="w-8" alt="icon facebook">
+                  </a>
+                  <a href="https://twitter.com/{{ $ourTeam['tweeter'] }}">
                     <img src="/img/icons/twitter.svg" class="w-8" alt="icon twitter">
-                  </div>
+                  </a>
                 </div>
-                <p class="text-3xl">Rafli Chaerul. G</p>
-                <p class="text-xl text-[#DDBB74]">Directur</p>
-            </div>
-        @endfor
+              </div>
+              <p class="text-3xl">{{ $ourTeam['name'] }}</p>
+              <p class="text-xl text-[#DDBB74]">{{ $ourTeam['position'] }}</p>
+          </div>
+        @endforeach
       </div>
     </div>
   </section>
-
-  @php
-      $ourClients = ['wifiku.png', 'priba.png', 'Tpb.png', 'msn.png'];
-  @endphp
+  
   <section class="flex items-center justify-center flex-col bg-main-smoke-white py-40">
     <div class="mb-16">
       <h3 class="font-bold text-5xl bg-gradient-to-b from-[#9E00FF] to-[#27AAE1] bg-clip-text text-transparent">Our Client</h3>
